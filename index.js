@@ -237,10 +237,13 @@ Using the annoyingSong function below do the following:
 2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
-
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for(let i = number; i > 0; i --){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`;
+  }
 }
+
+console.log('task 6', annoyingSong(8));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -258,9 +261,22 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+
+function grade(number){
+  if(number >= 90){
+    return `you got an A`;
+  }else if(number < 90 && number >= 80){
+    return `you got a B`;
+  }else if(number < 80 && number >= 70){
+    return `you got a C`;
+  }else if(number < 70 && number >= 60){
+    return `you got a D`;
+  }else if(number < 60){
+    return `you got an F`
+  }
 }
+
+console.log(`task 7`, grade(85));
 
 
 
